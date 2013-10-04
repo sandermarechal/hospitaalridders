@@ -9,6 +9,8 @@
     "require": {
         "php": ">=5.3.3",
         "doctrine/doctrine-bundle": "1.2.*",
+        "doctrine/migrations": "dev-master",
+        "doctrine/doctrine-migrations-bundle": "dev-master",
         "doctrine/orm": "2.4.*",
         "incenteev/composer-parameter-handler": "~2.0",
         "raulfraile/ladybug-bundle": "v1.0.2",
@@ -17,6 +19,7 @@
         "sensio/generator-bundle": "2.3.*",
         "sonata-project/admin-bundle": "2.2.*",
         "sonata-project/doctrine-orm-admin-bundle": "2.2.*",
+        "sonata-project/user-bundle": "2.2.*@dev",
         "symfony/assetic-bundle": "2.3.*",
         "symfony/monolog-bundle": "2.3.*",
         "symfony/swiftmailer-bundle": "2.3.*",
