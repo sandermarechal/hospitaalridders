@@ -1,0 +1,7 @@
+parameters:
+#    jejik_app.example.class: Jejik\AppBundle\Example
+
+services:
+#    jejik_app.example:
+#        class: %jejik_app.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

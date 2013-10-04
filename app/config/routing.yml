@@ -1,0 +1,3 @@
+jejik_app:
+    resource: "@JejikAppBundle/Resources/config/routing.yml"
+    prefix:   /

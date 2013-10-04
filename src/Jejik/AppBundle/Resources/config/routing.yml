@@ -1,0 +1,3 @@
+jejik_app_default:
+    resource: "@JejikAppBundle/Controller/DefaultController.php"
+    type:     annotation
