@@ -15,6 +15,8 @@
         "sensio/distribution-bundle": "2.3.*",
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
+        "sonata-project/admin-bundle": "2.2.*",
+        "sonata-project/doctrine-orm-admin-bundle": "2.2.*",
         "symfony/assetic-bundle": "2.3.*",
         "symfony/monolog-bundle": "2.3.*",
         "symfony/swiftmailer-bundle": "2.3.*",
