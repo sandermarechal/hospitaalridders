@@ -31,6 +31,9 @@
         "symfony/monolog-bundle": "2.3.*",
         "symfony/swiftmailer-bundle": "2.3.*",
         "symfony/symfony": "2.3.*",
+        "symfony-cmf/core-bundle": "1.0.*@dev",
+        "symfony-cmf/routing": "1.1.*@dev",
+        "symfony-cmf/routing-bundle": "1.1.*@dev",
         "symfony-cmf/tree-browser-bundle": "1.0.*@dev",
         "twig/extensions": "1.0.*"
     },
