@@ -79,6 +79,24 @@ sonata_block:
     blocks:
         sonata.admin.block.admin_list:
             contexts:   [admin]
+        sonata_admin_doctrine_phpcr.tree_block:
+            settings:
+                id: '/cms'
+            contexts: [admin]
+
+sonata_admin:
+    templates:
+        ajax: SonataAdminBundle::ajax_layout.html.twig
+    dashboard:
+        blocks:
+            - { position: right, type: sonata.admin.block.admin_list }
+            - { position: left, type: sonata_admin_doctrine_phpcr.tree_block }
+
+sonata_doctrine_phpcr_admin:
+    document_tree:
+        Doctrine\ODM\PHPCR\Document\Generic:
+            valid_children:
+                - all
 
 sonata_user:
     table:

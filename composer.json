@@ -25,11 +25,13 @@
         "sensio/generator-bundle": "2.3.*",
         "sonata-project/admin-bundle": "2.2.*",
         "sonata-project/doctrine-orm-admin-bundle": "2.2.*",
+        "sonata-project/doctrine-phpcr-admin-bundle": "1.0.*@dev",
         "sonata-project/user-bundle": "2.2.*@dev",
         "symfony/assetic-bundle": "2.3.*",
         "symfony/monolog-bundle": "2.3.*",
         "symfony/swiftmailer-bundle": "2.3.*",
         "symfony/symfony": "2.3.*",
+        "symfony-cmf/tree-browser-bundle": "1.0.*@dev",
         "twig/extensions": "1.0.*"
     },
     "scripts": {
