@@ -49,6 +49,16 @@ doctrine:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
 
+doctrine_phpcr:
+    session:
+        backend:
+            type: doctrinedbal
+        workspace: default
+        username: %phpcr_user%
+        password: %phpcr_password%
+    odm:
+        auto_mapping: true
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
