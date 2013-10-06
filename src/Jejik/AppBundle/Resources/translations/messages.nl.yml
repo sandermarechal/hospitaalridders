@@ -1,0 +1,6 @@
+dashboard:
+    label_page: Pagina's
+
+page:
+    title: Titel
+    body: Inhoud

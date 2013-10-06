@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: @JejikAppBundle/Resources/config/admin.xml }
 
 framework:
     secret:          %secret%
@@ -77,6 +78,8 @@ cmf_routing:
             phpcr:
                 enabled: true
 
+cmf_tree_browser:
+
 fos_user:
     db_driver: orm
     firewall_name: main
@@ -105,6 +108,9 @@ sonata_admin:
 sonata_doctrine_phpcr_admin:
     document_tree:
         Doctrine\ODM\PHPCR\Document\Generic:
+            valid_children:
+                - all
+        Jejik\AppBundle\Document\Page:
             valid_children:
                 - all
 

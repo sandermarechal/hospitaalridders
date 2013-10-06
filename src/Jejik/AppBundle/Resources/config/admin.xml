@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="cmf_content.admin" class="Jejik\AppBundle\Admin\PageAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_phpcr" group="dashboard.cmf" label="dashboard.label_page" label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <argument/>
+            <argument>Jejik\AppBundle\Document\Page</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+
+            <call method="setRouteBuilder">
+                <argument type="service" id="sonata.admin.route.path_info_slashes" />
+            </call>
+
+            <call method="setRootPath">
+                <argument>/cms/pages</argument>
+            </call>
+        </service>
+    </services>
+</container>
