@@ -3,6 +3,7 @@
 namespace Jejik\AppBundle\Document;
 
 use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCR;
+use Symfony\Cmf\Bundle\CoreBundle\PublishWorkflow\PublishableInterface;
 use Symfony\Cmf\Bundle\RoutingBundle\Doctrine\Phpcr\Route;
 use Symfony\Cmf\Component\Routing\RouteReferrersReadInterface;
 
@@ -11,7 +12,7 @@ use Symfony\Cmf\Component\Routing\RouteReferrersReadInterface;
  *
  * @PHPCR\Document
  */
-class Page extends Route implements RouteReferrersReadInterface
+class Page extends Route implements RouteReferrersReadInterface, PublishableInterface
 {
     /**
      * @PHPCR\String
@@ -24,6 +25,12 @@ class Page extends Route implements RouteReferrersReadInterface
      * @var string
      */
     private $body;
+
+    /**
+     * @PHPCR\Boolean
+     * @var bool
+     */
+    private $publishable = true;
 
     /**
      * Getter for children
@@ -76,6 +83,28 @@ class Page extends Route implements RouteReferrersReadInterface
     public function setBody($body)
     {
         $this->body = $body;
+        return $this;
+    }
+
+    /**
+     * Isser for publishable
+     *
+     * @return bool
+     */
+    public function isPublishable()
+    {
+        return $this->publishable;
+    }
+    
+    /**
+     * Setter for publishable
+     *
+     * @param bool $publishable
+     * @return self
+     */
+    public function setPublishable($publishable = true)
+    {
+        $this->publishable = $publishable;
         return $this;
     }
 

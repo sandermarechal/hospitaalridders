@@ -49,6 +49,7 @@ class PageAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('id')
+            ->add('publishable')
             ->add('title')
         ;
     }
@@ -67,6 +68,7 @@ class PageAdmin extends Admin
                 ->add('name', 'text')
                 ->add('title', 'text')
                 ->add('body', 'textarea', array('required' => false))
+                ->add('publishable', 'checkbox', array('required' => false))
             ->end()
         ;
     }
