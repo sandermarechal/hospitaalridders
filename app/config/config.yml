@@ -80,6 +80,8 @@ cmf_routing:
                 route_basepath: %jejik_app.cms_basepath%
                 content_basepath: %jejik_app.cms_basepath%
                 use_sonata_admin: false
+        controllers_by_class:
+            Jejik\AppBundle\Document\Page: JejikAppBundle:Page:show
 
 cmf_tree_browser:
 

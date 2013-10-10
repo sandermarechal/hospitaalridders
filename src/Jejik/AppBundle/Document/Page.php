@@ -3,34 +3,16 @@
 namespace Jejik\AppBundle\Document;
 
 use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCR;
+use Symfony\Cmf\Bundle\RoutingBundle\Doctrine\Phpcr\Route;
+use Symfony\Cmf\Component\Routing\RouteReferrersReadInterface;
 
 /**
  * CMS page
  *
  * @PHPCR\Document
  */
-class Page
+class Page extends Route implements RouteReferrersReadInterface
 {
-    /**
-     * @PHPCR\Id(strategy="parent")
-     */
-    private $id;
-
-    /**
-     * @PHPCR\Parentdocument
-     */
-    private $parent;
-
-    /**
-     * @PHPCR\Nodename
-     */
-    private $name;
-
-    /**
-     * @PHPCR\Children
-     */
-    private $children;
-
     /**
      * @PHPCR\String
      * @var string
@@ -42,60 +24,6 @@ class Page
      * @var string
      */
     private $body;
-
-    /**
-     * Getter for id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Getter for parent
-     *
-     * @return string
-     */
-    public function getParent()
-    {
-        return $this->parent;
-    }
-    
-    /**
-     * Setter for parent
-     *
-     * @param string $parent
-     * @return self
-     */
-    public function setParent($parent = null)
-    {
-        $this->parent = $parent;
-        return $this;
-    }
-
-    /**
-     * Getter for name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-    
-    /**
-     * Setter for name
-     *
-     * @param string $name
-     * @return self
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-        return $this;
-    }
 
     /**
      * Getter for children
@@ -149,5 +77,32 @@ class Page
     {
         $this->body = $body;
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getContent()
+    {
+        return $this;
+    }
+    
+    /**
+     * Setter for content
+     *
+     * @param mixed $content
+     * @return self
+     */
+    public function setContent($content)
+    {
+        throw new \LogicException('Do not set any content. The page route and content are the same object');
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getRoutes()
+    {
+        return array($this);
     }
 }
