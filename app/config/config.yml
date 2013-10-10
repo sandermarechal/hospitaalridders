@@ -117,7 +117,7 @@ sonata_doctrine_phpcr_admin:
                 - all
         Jejik\AppBundle\Document\Page:
             valid_children:
-                - all
+                - Jejik\AppBundle\Document\Page
 
 sonata_user:
     table:
