@@ -1,0 +1,8 @@
+{
+    "name": "hospitaalridders",
+    "private": true,
+    "directory": "app/Resources/assets/bower",
+    "dependencies": {
+        "foundation": "4.3.2"
+    }
+}

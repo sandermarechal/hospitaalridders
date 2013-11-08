@@ -3,8 +3,10 @@
 /app/cache/*
 /app/config/parameters.yml
 /app/logs/*
+/app/Resources/assets/bower/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
+!app/Resources/assets/bower/.gitkeep
 /build/
 /vendor/
 /bin/
